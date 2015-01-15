@@ -1,0 +1,23 @@
+Description:
+    generates an abstract Database connection class that acts as the interface to the given database
+
+Example:
+    $ rails generate db_coonect <Name of Database>
+
+    This will create:
+      create  app/models/<name_of_database>_db.rb
+        -----
+        class NameofdatabaseDb < ActiveRecord::Base
+          self.abstract_class = true
+        ...
+        -----
+
+     Inside of which will be the appropriate configuration for that database's ActiveRecord connection.
+     All rails models representing tables in that database must inherit from this abstract class.
+
+     -----
+     rails model:  app/models/some_table.rb
+     -----
+        class SomeTable < NameofdatabaseDb
+        ...
+     -----
