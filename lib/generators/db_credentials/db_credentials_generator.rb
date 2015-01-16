@@ -38,5 +38,10 @@ class DbCredentialsGenerator < Rails::Generators::NamedBase
 
   end
 
+  def load_credentials
+    unless File.exists?('config/initializers/database_credentials.rb')
+      copy_file("database_credentials.rb",'config/initializers/database_credentials.rb')
+    end
+  end
 
 end

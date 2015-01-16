@@ -1,6 +1,6 @@
 Description:
     Create a database credentials yml file that holds the path to the username and password files.
-
+    Create an initializer that adds the credentilas to ActiveRecord.
 Example:
     rails generate db_credentials database_name
 
