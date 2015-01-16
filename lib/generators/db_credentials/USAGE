@@ -1,0 +1,14 @@
+Description:
+    Create a database credentials yml file that holds the path to the username and password files.
+
+Example:
+    rails generate db_credentials database_name
+
+    This will create:
+      If they dont exist:
+        config/initializers/database_credentials.rb
+        config/database_credentials.yml
+
+    Otherwise for: 
+      config/database_credentials.yml
+        It will insert the entry for the named database, if one doesnt already exist. 
