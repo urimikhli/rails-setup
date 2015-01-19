@@ -7,7 +7,7 @@ This is a collection of generators to help setup rails development in an enterpr
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_setup'
+gem 'rails_enterprise_setup'
 ```
 
 And then execute:

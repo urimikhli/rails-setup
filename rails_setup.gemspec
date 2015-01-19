@@ -9,7 +9,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mikhli, Uri"]
   spec.email         = ["urimikhli@gmail.com"]
   spec.summary       = %q{Generators for setting up common enterprise development needs for rails}
-  spec.description   = %q{Topics covered: \n Multiple DBs \n Database credential managment \n SSL in development \n Session Managment Via 3rd Party authentication service.}
+  spec.description   = %q{Topics covered:
+    * Multiple DBs
+    * Database credential managment
+    * SSL in development
+    }
   spec.homepage      = ""
   spec.license       = "MIT"
 
