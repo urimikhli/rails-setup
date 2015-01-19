@@ -1,0 +1,14 @@
+Description:
+    This generator will do a full rails setup.
+    Generators invoked:
+      * db_connect
+      * db_credentials
+      * ssl_mode generators
+    
+    You will have the option of choosing all or any of the setups. 
+
+Example:
+    rails generate setup_rails
+
+    you will be asked if you want all generators to run or specific generators to run.
+
