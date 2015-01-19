@@ -1,0 +1,15 @@
+Description:
+    Setup Rails to run SSL mode in development. This will use port 3001 when running in ssl mode. 
+
+Example:
+    rails generate ssl_setup
+
+    This will:
+        * insert the config.force_ssl = true line into applicaton.rb
+        * insert code for starting rails development in SSL mode into bin/rails.
+        * create a certs/ directory that holds the self signed certs needed to run in ssl mode. You will need to create your own self signed certifications. Google "self signed certificate in rails".
+
+Run Time Invokation:
+  * None SSL mode: $> rails s     #note: this is the standard invokation.
+  * SSL mode: $> SSL=true rails s 
+
