@@ -1,6 +1,6 @@
 # RailsSetup
 
-TODO: Write a gem description
+This is a collection of generators to help setup rails development in an enterprise environment.
 
 ## Installation
 
@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+rails generate setup_rails
+```
+Follow directions.
+
+Note: You can enter more then 1 letter.
+
 
 ## Contributing
 
