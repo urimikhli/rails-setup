@@ -11,7 +11,7 @@ class SslModeGenerator < Rails::Generators::Base
       say("\nYou need to have a 'certs/' directory where your self signed certificates will be stored.  It will be populated with the correct file names, but these files will be empty. You will still need to generate your own:")
       create_certs_dir = ask("Would you like to create certs/ directory?[y/N]:")
       if create_certs_dir =~ /[Yy]/
-        run "cp -rf #{Gem.loaded_specs['rails_setup'].full_gem_path}/lib/generators/ssl_mode/templates/certs certs"
+        run "cp -rf #{Gem.loaded_specs['rails_enterprise_setup'].full_gem_path}/lib/generators/ssl_mode/templates/certs certs"
       end
     end
   end
@@ -21,7 +21,7 @@ class SslModeGenerator < Rails::Generators::Base
 
     sentinal = /require\s\'rails\/commands\'/i
 
-    data = File.read(Gem.loaded_specs['rails_setup'].full_gem_path + "/lib/generators/ssl_mode/templates/sslrails.rb")
+    data = File.read(Gem.loaded_specs['rails_enterprise_setup'].full_gem_path + "/lib/generators/ssl_mode/templates/sslrails.rb")
 
     inject_into_file 'bin/rails', "\n#{data}\n",before: sentinal, verbose: true, force: false
   end
