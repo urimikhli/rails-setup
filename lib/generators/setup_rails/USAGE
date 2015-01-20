@@ -3,12 +3,23 @@ Description:
     Generators invoked:
       * db_connect
       * db_credentials
-      * ssl_mode generators
-    
-    You will have the option of choosing all or any of the setups. 
+      * ssl_mode
 
-Example:
-    rails generate setup_rails
+  For more info on each generator run:
+    rails generate db_connect -h
+    rails generate db_credentials -h
+    rails generate ssl_mode -h
 
-    you will be asked if you want all generators to run or specific generators to run.
+Usage:
+    You will have the option of choosing all or any of the setups:
+        all[Aa]:
+        db_connect[Cc]:
+        db_credentials[Rr]:
+        ssl_mode[Ss]:
+        none[]:
 
+    You can pick more then one setup:
+
+        "What setup would you like to run. (Default: none)[AaCcRsSs]:" cr
+
+      Typing 'cr' would run both db_connect and db_credentials sequentially

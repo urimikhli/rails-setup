@@ -2,12 +2,12 @@ Description:
     generates an abstract Database connection class that acts as the interface to the given database
 
 Example:
-    $ rails generate db_coonect <Name of Database>
+    $ rails generate db_connect <Name of Database>
 
     This will create:
-      create  app/models/<name_of_database>_db.rb
+      create  app/models/name_of_database_db.rb
         -----
-        class NameofdatabaseDb < ActiveRecord::Base
+        class NameOfDatabaseDb < ActiveRecord::Base
           self.abstract_class = true
         ...
         -----
@@ -18,6 +18,6 @@ Example:
      -----
      rails model:  app/models/some_table.rb
      -----
-        class SomeTable < NameofdatabaseDb
+        class SomeTable < NameOfDatabaseDb
         ...
      -----

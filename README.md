@@ -23,10 +23,19 @@ Or install it yourself as:
 ```ruby
 rails generate setup_rails
 ```
-Follow directions.
+Follow the directions.
 
 Note: You can enter more then 1 letter.
 
+## More Info
+
+```ruby
+    rails generate setup_rails -h
+
+    rails generate db_connect -h
+    rails generate db_credentials -h
+    rails generate ssl_mode -h
+```
 
 ## Contributing
 
