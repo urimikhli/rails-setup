@@ -12,20 +12,30 @@ gem 'rails_enterprise_setup'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rails_setup
+    $ bundle install
 
 ## Usage
 
 ```ruby
 rails generate setup_rails
 ```
-Follow the directions.
+
+You will have the option of choosing all or any of the setups:
+
+```ruby
+  all[Aa]:
+  db_connect[Cc]:
+  db_credentials[Rr]:
+  ssl_mode[Ss]:
+  none[]:
+```
 
 Note: You can enter more then 1 letter.
+
+e.g.
+  "What setup would you like to run. (Default: none)[AaCcRsSs]:" cr
+
+typing 'cr' will run db_connect and db_credentials sequentially. running 'crs' will be the same as 'a' 
 
 ## More Info
 
