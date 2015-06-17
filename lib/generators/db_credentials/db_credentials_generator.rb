@@ -20,8 +20,8 @@ class DbCredentialsGenerator < Rails::Generators::NamedBase
 #{Rails.env}:
   #{file_name}:
     home_path: "#{Dir.home}"
-    username: "config/passwords/#{Rails.env}_#{file_name}_username.txt"
-    password: "config/passwords/#{Rails.env}_#{file_name}_password.txt"
+    username: "/config/passwords/#{Rails.env}_#{file_name}_username.txt"
+    password: "/config/passwords/#{Rails.env}_#{file_name}_password.txt"
 
       FILE
     else
@@ -29,8 +29,8 @@ class DbCredentialsGenerator < Rails::Generators::NamedBase
         inject_into_file 'config/database_credentials.yml',"
   #{file_name}:
     home_path: \"#{Dir.home}\"
-    username: \"config/passwords/#{Rails.env}_#{file_name}_username.txt\"
-    password: \"config/passwords/#{Rails.env}_#{file_name}_password.txt\"
+    username: \"/config/passwords/#{Rails.env}_#{file_name}_username.txt\"
+    password: \"/config/passwords/#{Rails.env}_#{file_name}_password.txt\"
 
 ", after: /#{Rails.env}:/, verbose: true, force: false
       end

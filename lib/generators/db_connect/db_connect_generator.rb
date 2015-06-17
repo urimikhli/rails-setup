@@ -24,7 +24,7 @@ class DbConnectGenerator < Rails::Generators::NamedBase
 
       sslca = ask("path to database ssl certificate if any[]")
       unless sslca.blank?
-        sslca = "sslca: #{sslca}"
+        sslca = "ssl-ca: #{sslca}"
       end
 
       inject_into_file 'config/database.yml',"
